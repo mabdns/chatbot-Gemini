@@ -6,7 +6,7 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 client = genai.Client(api_key=api_key)
-chat = client.chats.create(model="gemini-2.0-flash")
+chat = client.chats.create(model="gemini-2.5-flash")
 
 def chat_bot(prompt):
     response = chat.send_message(prompt)
